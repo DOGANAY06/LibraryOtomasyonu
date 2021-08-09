@@ -1,0 +1,86 @@
+﻿<Window x:Class="LibraryAutomationApplication.BilgiEkrani"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraryAutomationApplication"
+        mc:Ignorable="d"
+        Title="BilgiEkrani" Height="450" Width="800" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}"
+        Loaded="Window_Loaded"
+        >
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded" >
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation Duration="00:00:0.7" Storyboard.TargetProperty="Opacity"
+                                     From="0.0" To="1.0" />
+                    
+                </Storyboard>
+                <!--Duration 7 saniyede gel 0.0 da 1.0 gel saydamlık olarak-->
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid>
+        <Canvas>
+            <Label Content="BİLGİLENDİRME" Canvas.Left="266" Canvas.Top="100" Panel.ZIndex="3" Foreground="White"/>
+            <Label Content="BİLGİLENDİRME" Canvas.Left="260" Canvas.Top="140" Panel.ZIndex="3"
+                   Foreground="#FF0F408D" Height="140" Width="310"
+                   VerticalContentAlignment="Center" x:Name="BilgiEkrani_Content"
+                   />
+            <Button Content="X" x:Name="btn_BilgiEkraniKapat" Style="{DynamicResource minibutonlar}" FontSize="12"
+                   Click="btn_BilgiEkraniKapat_Click" Canvas.Left="576" Canvas.Top="100"
+                    Panel.ZIndex="3" Width="24" Height="21"
+                    />
+            <Image Source="/images/icon/basarili.png"  x:Name="img_Olumlu" Height="50" Canvas.Left="162" Canvas.Top="90" Width="106" 
+                  Panel.ZIndex="3" 
+                   />
+            <Image Source="/images/icon/basarisiz.png"  x:Name="img_Olumsuz" Height="50" Canvas.Left="162" Canvas.Top="90" Width="106" 
+                  Panel.ZIndex="3" 
+                   />
+            <Ellipse Height="80" Width="85" Canvas.Left="175"
+                     x:Name="Olumlu_Bilgi"
+                     Canvas.Top="75" Panel.ZIndex="2" StrokeThickness="4" 
+                     RenderTransformOrigin="0.5,0.5" Style="{DynamicResource don_dunya}">
+                <Ellipse.RenderTransform>
+                    <RotateTransform/>
+                    <!--dönme animasyonu verdim-->
+                </Ellipse.RenderTransform>
+                <Ellipse.Stroke>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF8ACEC2" Offset="0.187"/>
+                        <GradientStop Color="White" Offset="1"/>
+                        <GradientStop Color="#27ae60" Offset="0.817"/>
+                        <GradientStop Color="White"/>
+                    </LinearGradientBrush>
+                </Ellipse.Stroke>
+
+            </Ellipse>
+            <Border Background="#FF10408C" Height="23" Width="392" Canvas.Left="210" Canvas.Top="100" Panel.ZIndex="1" x:Name="BilgiEkrani_Header" >
+
+            </Border>
+            <Border Background="White" Height="170" Width="392" Canvas.Left="210" Canvas.Top="125"  >
+
+            </Border>
+
+            <Ellipse Height="80" Width="85" Canvas.Left="175"
+                     x:Name="Olumsuz_Bilgi"
+                     Canvas.Top="75" Panel.ZIndex="1" StrokeThickness="4" 
+                     RenderTransformOrigin="0.5,0.5" Style="{DynamicResource don_dunya}">
+                <Ellipse.RenderTransform>
+                    <RotateTransform/>
+                    <!--dönme animasyonu verdim-->
+                </Ellipse.RenderTransform>
+                <Ellipse.Stroke>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#e74c3c" Offset="0.187"/>
+                        <GradientStop Color="White" Offset="1"/>
+                        <GradientStop Color="#e74c3c" Offset="0.817"/>
+                        <GradientStop Color="White"/>
+                    </LinearGradientBrush>
+                </Ellipse.Stroke>
+
+            </Ellipse>
+
+        </Canvas>
+    </Grid>
+</Window>

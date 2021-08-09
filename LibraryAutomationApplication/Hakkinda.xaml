@@ -1,0 +1,22 @@
+﻿<Window x:Class="LibraryAutomationApplication.Hakkinda"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraryAutomationApplication"
+        mc:Ignorable="d"
+        Title="Hakkında" Height="400" Width="900" AllowsTransparency="True" WindowStyle="None" Background="White" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+    <Grid>
+        <Canvas>
+            <Label Content="Uygulamamız Kütüphane Kitap Ekleme Uygulamasıdır &#10;Uygulamada başarılı eklenen her kitap 'kitap.db' de tutulmaktadır." Canvas.Left="30" Canvas.Top="65" Height="100" Width="780" Background="White" FontSize="24" FontStyle="Normal" FontWeight="Bold"/>
+
+        </Canvas>
+        <Border Background="#FF10408C" Panel.ZIndex="1" x:Name="BilgiEkrani_Header" Margin="0,-5,0,375" >
+            <Label Content="Uygulama Hakkında" Margin="50,0,-50,0" Foreground="White" FontSize="15"/>
+        </Border>
+        <Button Content="X" x:Name="btn_HakkindaKapat" Style="{DynamicResource minibutonlar}" FontSize="12"
+            Click="btn_HakkindaKapat_Click"
+            Panel.ZIndex="3" Width="Auto" Margin="866,-5,0,375"
+                    />
+    </Grid>
+</Window>

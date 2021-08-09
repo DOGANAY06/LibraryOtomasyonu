@@ -1,0 +1,79 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="db\**" />
+    <EmbeddedResource Remove="db\**" />
+    <None Remove="db\**" />
+    <Page Remove="db\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="images\icon\add.png" />
+    <None Remove="images\icon\basarili.png" />
+    <None Remove="images\icon\basarisiz.png" />
+    <None Remove="images\icon\bilgiveren.png" />
+    <None Remove="images\icon\books.png" />
+    <None Remove="images\icon\calendar.png" />
+    <None Remove="images\icon\checklist.png" />
+    <None Remove="images\icon\hamburgermenuıcon.png" />
+    <None Remove="images\icon\information.png" />
+    <None Remove="images\icon\kitapiptal.png" />
+    <None Remove="images\icon\kutuphane.png" />
+    <None Remove="images\icon\library.png" />
+    <None Remove="images\icon\note-book.png" />
+    <None Remove="images\icon\okuyan.jpg" />
+    <None Remove="images\icon\okuyucu.png" />
+    <None Remove="images\icon\oturanadam.png" />
+    <None Remove="images\icon\person.png" />
+    <None Remove="images\icon\reading.png" />
+    <None Remove="images\icon\setting-lines.png" />
+    <None Remove="images\pencereresimler\altpencere.png" />
+    <None Remove="images\pencereresimler\altpencere2.png" />
+    <None Remove="images\pencereresimler\footer.png" />
+    <None Remove="images\pencereresimler\pencere_cizgi.png" />
+    <None Remove="images\pencereresimler\sagpencere.png" />
+    <None Remove="music\sfx-pop.mp3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SQLite" Version="1.0.114.4" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.114.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\icon\add.png" />
+    <Resource Include="images\icon\basarili.png" />
+    <Resource Include="images\icon\basarisiz.png" />
+    <Resource Include="images\icon\bilgiveren.png" />
+    <Resource Include="images\icon\books.png" />
+    <Resource Include="images\icon\calendar.png" />
+    <Resource Include="images\icon\checklist.png" />
+    <Resource Include="images\icon\hamburgermenuıcon.png" />
+    <Resource Include="images\icon\information.png" />
+    <Resource Include="images\icon\kitapiptal.png" />
+    <Resource Include="images\icon\kutuphane.png" />
+    <Resource Include="images\icon\library.png" />
+    <Resource Include="images\icon\note-book.png" />
+    <Resource Include="images\icon\okuyan.jpg" />
+    <Resource Include="images\icon\okuyucu.png" />
+    <Resource Include="images\icon\oturanadam.png" />
+    <Resource Include="images\icon\person.png" />
+    <Resource Include="images\icon\reading.png" />
+    <Resource Include="images\icon\setting-lines.png" />
+    <Resource Include="images\pencereresimler\altpencere.png" />
+    <Resource Include="images\pencereresimler\altpencere2.png" />
+    <Resource Include="images\pencereresimler\footer.png" />
+    <Resource Include="images\pencereresimler\pencere_cizgi.png" />
+    <Resource Include="images\pencereresimler\sagpencere.png" />
+    <Content Include="music\sfx-pop.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
